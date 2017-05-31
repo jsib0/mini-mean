@@ -1,0 +1,3 @@
+<p class="error" *ngFor="let err of errors">{{err}}</p>
+<app-products-new (newProductEvent)="createProduct($event)"></app-products-new>
+<app-products-list [products]="products"></app-products-list>

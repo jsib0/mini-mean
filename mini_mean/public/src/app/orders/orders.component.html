@@ -1,0 +1,7 @@
+<p class="error" *ngFor="let err of errors">{{err}}</p>
+
+<app-orders-new [product]="products"   [customer]="customers" (newOrderEvent)="createOrderInOrdersComponent($event)"></app-orders-new>
+
+
+
+<app-orders-list [orders]="order"></app-orders-list>

@@ -1,0 +1,15 @@
+<div *ngIf="customersGoingIn">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th> Created Date</th>
+      <th> Actions</th>
+    </tr>
+    <tr *ngFor="let customer of customersGoingIn">
+      <td>{{customer.name}}</td>
+      <td>{{ customer.createdAt | date: 'mediumDate'}}</td>
+      <td> <button (click)="deleteCustomer(customer._id)">Remove</button></td>
+
+    </tr>
+  </table>
+</div>

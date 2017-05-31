@@ -1,0 +1,13 @@
+<form (submit) ="createOrder(formData)" #formData="ngForm" >
+  Customer:
+  <select name="_customer" ngModel >
+    <option  *ngFor="let customer of customer" [value]=customer._id>{{ customer.name }}</option>
+  </select><br>
+  Product:
+  <select name="product" ngModel>
+    <option *ngFor="let product of product" [value]="product._id">{{ product.name }}</option>
+  </select><br>
+  Quantity:
+  <input type="number" name="quantity" value="" ngModel><br>
+  <input type="submit" name="" value="Create Order">
+</form>
